@@ -16,6 +16,15 @@ pipeline{
     //定义流水线的加工流程
     stages{
         //流水线的所有阶段
+        stage('环境检查'){
+            steps{
+                sh 'printenv'
+                sh 'java --version'
+                sh 'git --version'
+                sh 'docker version'
+                sh 'mvn -v'
+            }
+        }
         //1、编译 "abc"
         //一般单引号写常量，双引号可以写变量
         stage('编译'){
@@ -25,7 +34,6 @@ pipeline{
                 echo "$hello"
                 echo "${world}"
                 sh 'pwd && ls -alh'
-                sh 'printenv'
 
             }
         }
