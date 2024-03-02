@@ -1,3 +1,5 @@
+import org.springframework.core.env.Environment
+
 //写流水线的脚本（声明式、脚本式）
 pipeline{
     //全部的CICD流程都需要在这里定义
@@ -6,6 +8,10 @@ pipeline{
     agent any
 
     //定义一些环境信息
+    Environment{
+        hello="123456"
+        world="456789"
+    }
 
     //定义流水线的加工流程
     stages{
@@ -16,6 +22,9 @@ pipeline{
             steps{
                 //要做的所有事情
                 echo "编译"
+                echo "$hello"
+                echo "${world}"
+
             }
         }
 
