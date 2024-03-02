@@ -1,4 +1,4 @@
-//import org.springframework.core.env.Environment
+import org.springframework.core.env.Environment
 
 //写流水线的脚本（声明式、脚本式）
 pipeline{
