@@ -8,9 +8,9 @@ pipeline{
     agent any
 
     //定义一些环境信息
-    Environment{
-        hello="123456"
-        world="456789"
+    environment{
+        hello = "123456"
+        world = "456789"
     }
 
     //定义流水线的加工流程
