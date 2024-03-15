@@ -13,7 +13,7 @@ pipeline{
         world = "456789"
     }
 
-    //定义流水线的加工流程
+    // 定义流水线的加工流程
     stages{
         //流水线的所有阶段
         stage('环境检查'){
@@ -21,7 +21,7 @@ pipeline{
                 sh 'printenv'
                 sh 'java --version'
                 sh 'git --version'
-                sh 'docker --version'
+                sh 'docker version'
                 sh 'mvn -v'
             }
         }
