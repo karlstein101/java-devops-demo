@@ -22,7 +22,7 @@ pipeline{
                 sh 'java --version'
                 sh 'git --version'
                 sh 'docker version'
-                //sh 'mvn -v'
+                sh 'mvn -v'
             }
         }
         //1、编译 "abc"
